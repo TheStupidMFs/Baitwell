@@ -1,1 +1,421 @@
+/* ============================
+   BAITWELL V0.1
+============================ */
 
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#01070d;
+    color:white;
+}
+
+.hero{
+    position:relative;
+    width:100vw;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* -------------------------
+   Ocean
+--------------------------*/
+
+.ocean-bg{
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(to bottom,
+    rgba(0,0,0,.15),
+    rgba(0,0,0,.85)),
+    url("assets/images/ocean-texture.png");
+
+    background-size:cover;
+    background-position:center;
+
+    animation:oceanMove 18s ease-in-out infinite alternate;
+}
+
+/* -------------------------
+   Moon
+--------------------------*/
+
+.moon-wrap{
+
+    position:absolute;
+
+    width:100%;
+
+    top:4vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    z-index:2;
+
+}
+
+.moon{
+
+    width:220px;
+
+    opacity:.85;
+
+    filter:
+
+    drop-shadow(0 0 45px rgba(255,255,255,.45));
+
+}
+
+/* -------------------------
+   Clouds
+--------------------------*/
+
+.cloud{
+
+    position:absolute;
+
+    width:180%;
+
+    height:220px;
+
+    background:
+
+    radial-gradient(circle,
+
+    rgba(255,255,255,.08),
+
+    transparent 70%);
+
+    filter:blur(40px);
+
+}
+
+.cloud-one{
+
+    top:120px;
+
+    left:-30%;
+
+    animation:cloudOne 90s linear infinite;
+
+}
+
+.cloud-two{
+
+    top:180px;
+
+    left:-50%;
+
+    animation:cloudTwo 120s linear infinite;
+
+}
+
+/* -------------------------
+   Fog
+--------------------------*/
+
+.fog{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    linear-gradient(to top,
+
+    rgba(255,255,255,.05),
+
+    transparent 45%);
+
+    pointer-events:none;
+
+}
+
+.fog-one{
+
+    animation:fogMove 12s ease-in-out infinite alternate;
+
+}
+
+.fog-two{
+
+    opacity:.4;
+
+    animation:fogMove2 16s ease-in-out infinite alternate;
+
+}
+
+/* -------------------------
+   Boat
+--------------------------*/
+
+.scene{
+
+    position:relative;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+.boat{
+
+    position:absolute;
+
+    width:min(760px,82vw);
+
+    left:50%;
+
+    bottom:7vh;
+
+    transform:translateX(-50%);
+
+    z-index:4;
+
+    animation:boatRock 6s ease-in-out infinite;
+
+    filter:
+
+    drop-shadow(0 40px 80px rgba(0,0,0,.8));
+
+}
+
+/* -------------------------
+   Logo
+--------------------------*/
+
+.content{
+
+    position:absolute;
+
+    width:100%;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    bottom:4vh;
+
+    text-align:center;
+
+    z-index:10;
+
+}
+
+.logo{
+
+    width:240px;
+
+    margin-bottom:20px;
+
+}
+
+.eyebrow{
+
+    letter-spacing:.4em;
+
+    text-transform:uppercase;
+
+    font-size:.8rem;
+
+    opacity:.75;
+
+}
+
+.tagline{
+
+    margin-top:14px;
+
+    font-size:1.15rem;
+
+    opacity:.9;
+
+}
+
+button{
+
+    margin-top:28px;
+
+    background:white;
+
+    color:black;
+
+    border:none;
+
+    padding:16px 34px;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    font-weight:700;
+
+    letter-spacing:.12em;
+
+    transition:.25s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+}
+
+/* -------------------------
+   Grain
+--------------------------*/
+
+.grain{
+
+    position:absolute;
+
+    inset:0;
+
+    opacity:.08;
+
+    pointer-events:none;
+
+    background-image:
+
+    radial-gradient(white .5px, transparent .5px);
+
+    background-size:4px 4px;
+
+}
+
+/* -------------------------
+   Animations
+--------------------------*/
+
+@keyframes boatRock{
+
+    0%{
+
+        transform:
+
+        translateX(-50%)
+
+        rotate(-1deg)
+
+        translateY(0px);
+
+    }
+
+    50%{
+
+        transform:
+
+        translateX(-50%)
+
+        rotate(1deg)
+
+        translateY(10px);
+
+    }
+
+    100%{
+
+        transform:
+
+        translateX(-50%)
+
+        rotate(-1deg)
+
+        translateY(0px);
+
+    }
+
+}
+
+@keyframes oceanMove{
+
+    from{
+
+        transform:scale(1.03);
+
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+    }
+
+}
+
+@keyframes cloudOne{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(15%);
+
+    }
+
+}
+
+@keyframes cloudTwo{
+
+    from{
+
+        transform:translateX(0);
+
+    }
+
+    to{
+
+        transform:translateX(20%);
+
+    }
+
+}
+
+@keyframes fogMove{
+
+    from{
+
+        opacity:.15;
+
+    }
+
+    to{
+
+        opacity:.3;
+
+    }
+
+}
+
+@keyframes fogMove2{
+
+    from{
+
+        opacity:.08;
+
+    }
+
+    to{
+
+        opacity:.18;
+
+    }
+
+}
