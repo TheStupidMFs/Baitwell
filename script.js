@@ -10,7 +10,6 @@ const siteNav = document.getElementById("siteNav");
 
 const AUDIO_FADE_TARGET = 0.62;
 const AUDIO_FADE_MS = 2600;
-const AUDIO_AUTO_FADE_AFTER_MS = 60000;
 const CONTACT_EMAIL = "kfishamusic@gmail.com";
 
 let audioFadeTimer = null;
@@ -51,11 +50,6 @@ async function beginExperience() {
     audioStarted = true;
     fadeAudioTo(AUDIO_FADE_TARGET, AUDIO_FADE_MS);
 
-    window.setTimeout(() => {
-      if (!siteAudio.paused) {
-        fadeAudioTo(0, 4500, true);
-      }
-    }, AUDIO_AUTO_FADE_AFTER_MS);
   } catch (error) {
     console.info("Audio could not begin automatically:", error);
   }
