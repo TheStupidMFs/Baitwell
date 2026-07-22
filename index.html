@@ -1,1 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#090b0e" />
+  <meta name="description" content="Baitwell — the creative home of producer, composer, and multi-instrumentalist K.Fisha." />
+  <title>Baitwell — K.Fisha</title>
 
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="intro-open">
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- INTRO GATE -->
+  <section class="intro-gate" id="introGate" aria-label="Enter Baitwell">
+    <video
+      class="intro-video"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="auto"
+      poster="ocean-texture.png"
+    >
+      <source src="baitwellboatintro.mp4" type="video/mp4" />
+    </video>
+
+    <div class="intro-shade" aria-hidden="true"></div>
+
+    <div class="intro-content">
+      <img class="intro-logo" src="baitwell-logo.png" alt="Baitwell" />
+      <button class="enter-button" id="enterSite" type="button">
+        <span>See What's Cookin'</span>
+      </button>
+      <p class="intro-note">Sound begins after entry</p>
+    </div>
+  </section>
+
+  <!-- GLOBAL AUDIO -->
+  <audio id="siteAudio" preload="metadata">
+    <source src="Victoria Gardens.m4a" type="audio/mp4" />
+  </audio>
+
+  <button class="audio-control" id="audioControl" type="button" aria-label="Mute or play Victoria Gardens">
+    <span class="audio-bars" aria-hidden="true">
+      <i></i><i></i><i></i><i></i>
+    </span>
+    <span class="audio-copy">
+      <small>Now playing</small>
+      <strong>Victoria Gardens</strong>
+    </span>
+  </button>
+
+  <!-- NAVIGATION -->
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#home" aria-label="Baitwell home">
+      <img src="baitwell-logo.png" alt="" />
+      <span>BAITWELL</span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav" aria-label="Primary navigation">
+      <a href="#inside">Inside Baitwell</a>
+      <a href="#work">Featured Work</a>
+      <a href="#catalog">Catalog</a>
+      <a href="#goods">Goods</a>
+      <a href="#inquiries">Inquiries</a>
+    </nav>
+  </header>
+
+  <main id="siteContent">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <video
+        class="hero-video"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="kfisha-studio.jpg"
+      >
+        <source src="KfishaEmpire.mp4" type="video/mp4" />
+      </video>
+      <div class="hero-overlay" aria-hidden="true"></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow reveal">Baitwell presents</p>
+        <h1 class="reveal">K.FISHA</h1>
+        <p class="hero-role reveal">Producer. Composer. Multi-Instrumentalist.</p>
+        <p class="hero-tagline reveal">Creating records that last.</p>
+      </div>
+
+      <a class="scroll-cue" href="#inside" aria-label="Scroll to Inside Baitwell">
+        <span>Explore</span>
+        <i></i>
+      </a>
+    </section>
+
+    <!-- INSIDE BAITWELL -->
+    <section class="section inside" id="inside">
+      <div class="section-number">01</div>
+      <div class="inside-grid">
+        <div class="inside-image-wrap reveal">
+          <img src="kfisha-studio.jpg" alt="K.Fisha working in the studio" loading="lazy" />
+        </div>
+
+        <div class="inside-copy">
+          <p class="eyebrow reveal">Inside Baitwell</p>
+          <h2 class="reveal">The work starts before the record.</h2>
+          <p class="lead reveal">
+            Baitwell is the creative home of K.Fisha—a place where instinct, musicianship, and patience meet.
+          </p>
+          <p class="reveal">
+            Every session begins with a feeling. The sounds are shaped, stripped back, rebuilt, and refined until the record carries its own atmosphere.
+          </p>
+          <p class="reveal">
+            No chasing moments. No forcing trends. Just a commitment to music people can return to.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED WORK -->
+    <section class="section work" id="work">
+      <div class="section-number">02</div>
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Featured Work</p>
+          <h2>Selected records from the archive.</h2>
+        </div>
+        <p>Explore the sound through a focused selection of K.Fisha productions and placements.</p>
+      </div>
+
+      <div class="record-grid">
+        <article class="record-card reveal">
+          <div class="record-index">01</div>
+          <div>
+            <p class="record-type">NBA 2K placement</p>
+            <h3>Magnum P.I.</h3>
+            <p>Larry June</p>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=Larry+June+Magnum+P.I." target="_blank" rel="noopener noreferrer">Listen ↗</a>
+        </article>
+
+        <article class="record-card reveal">
+          <div class="record-index">02</div>
+          <div>
+            <p class="record-type">NBA 2K placement</p>
+            <h3>Black Iverson</h3>
+            <p>Guapdad 4000</p>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=Guapdad+4000+Black+Iverson" target="_blank" rel="noopener noreferrer">Listen ↗</a>
+        </article>
+
+        <article class="record-card reveal">
+          <div class="record-index">03</div>
+          <div>
+            <p class="record-type">Selected production</p>
+            <h3>Still Mackin'</h3>
+            <p>Larry June</p>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=Larry+June+Still+Mackin" target="_blank" rel="noopener noreferrer">Listen ↗</a>
+        </article>
+
+        <article class="record-card reveal">
+          <div class="record-index">04</div>
+          <div>
+            <p class="record-type">Selected production</p>
+            <h3>Sparklin' Water</h3>
+            <p>Larry June</p>
+          </div>
+          <a href="https://www.youtube.com/results?search_query=Larry+June+Sparklin+Water" target="_blank" rel="noopener noreferrer">Listen ↗</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- CATALOG -->
+    <section class="section catalog" id="catalog">
+      <div class="section-number">03</div>
+      <div class="catalog-intro reveal">
+        <p class="eyebrow">The Catalog</p>
+        <h2>Press play and let the records speak.</h2>
+      </div>
+
+      <div class="playlist-grid">
+        <article class="playlist-card reveal">
+          <div class="playlist-copy">
+            <span>Playlist 01</span>
+            <h3>Production by K.Fisha</h3>
+            <p>A broader collection of records produced by K.Fisha.</p>
+            <a class="text-link" href="https://youtube.com/playlist?list=PLDHVL628nogop2q62KaanNHXnpopkioEn" target="_blank" rel="noopener noreferrer">Open full playlist ↗</a>
+          </div>
+          <div class="embed-shell">
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?list=PLDHVL628nogop2q62KaanNHXnpopkioEn"
+              title="Production by K.Fisha playlist"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </article>
+
+        <article class="playlist-card reverse reveal">
+          <div class="playlist-copy">
+            <span>Playlist 02</span>
+            <h3>K.Fisha × Larry June</h3>
+            <p>A dedicated archive of records created across their long-running collaboration.</p>
+            <a class="text-link" href="https://youtube.com/playlist?list=PLDHVL628nogpc4mj-Ux2cKq6h8bIeQCIx" target="_blank" rel="noopener noreferrer">Open full playlist ↗</a>
+          </div>
+          <div class="embed-shell">
+            <iframe
+              src="https://www.youtube.com/embed/videoseries?list=PLDHVL628nogpc4mj-Ux2cKq6h8bIeQCIx"
+              title="K.Fisha and Larry June playlist"
+              loading="lazy"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- GOODS -->
+    <section class="section goods" id="goods">
+      <div class="section-number">04</div>
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow">Baitwell Goods</p>
+          <h2>Made for the studio. Built for the coast.</h2>
+        </div>
+        <a class="outline-button" href="https://baitwell.printify.me/" target="_blank" rel="noopener noreferrer">Shop the collection ↗</a>
+      </div>
+
+      <div class="goods-grid">
+        <a class="product-card reveal" href="https://baitwell.printify.me/" target="_blank" rel="noopener noreferrer">
+          <img src="baitwellembroiderhoodie.jpg" alt="Baitwell embroidered hoodie" loading="lazy" />
+          <div class="product-meta">
+            <div>
+              <span>01</span>
+              <h3>Embroidered Hoodie</h3>
+            </div>
+            <span>View ↗</span>
+          </div>
+        </a>
+
+        <a class="product-card reveal" href="https://baitwell.printify.me/" target="_blank" rel="noopener noreferrer">
+          <img src="baitwelllongsleeve.jpg" alt="Baitwell long sleeve shirt" loading="lazy" />
+          <div class="product-meta">
+            <div>
+              <span>02</span>
+              <h3>Baitwell Long Sleeve</h3>
+            </div>
+            <span>View ↗</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- INQUIRIES -->
+    <section class="section inquiries" id="inquiries">
+      <div class="section-number">05</div>
+      <div class="inquiry-layout">
+        <div class="inquiry-copy">
+          <p class="eyebrow reveal">Work With K.Fisha</p>
+          <h2 class="reveal">Bring the right idea into the room.</h2>
+          <p class="lead reveal">
+            Inquire about beats, exclusive production, sample packs, drum kits, licensing, engineering, and collaborations.
+          </p>
+
+          <div class="services reveal" aria-label="Available services">
+            <span>Beat Leasing</span>
+            <span>Exclusive Beats</span>
+            <span>Custom Production</span>
+            <span>Sample Packs</span>
+            <span>Drum Kits</span>
+            <span>Licensing</span>
+          </div>
+        </div>
+
+        <form class="inquiry-form reveal" id="inquiryForm">
+          <div class="form-row">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+          </div>
+
+          <label>
+            <span>Artist / Company <em>Optional</em></span>
+            <input type="text" name="artist" autocomplete="organization" />
+          </label>
+
+          <div class="form-row">
+            <label>
+              <span>Interested In</span>
+              <select name="interest" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Beat Leasing</option>
+                <option>Exclusive Beat</option>
+                <option>Custom Production</option>
+                <option>Sample Pack</option>
+                <option>Drum Kit</option>
+                <option>Mixing / Engineering</option>
+                <option>Licensing</option>
+                <option>Collaboration</option>
+                <option>Other</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Budget <em>Optional</em></span>
+              <select name="budget">
+                <option value="" selected>Not specified</option>
+                <option>Under $500</option>
+                <option>$500–$1,000</option>
+                <option>$1,000–$2,500</option>
+                <option>$2,500–$5,000</option>
+                <option>$5,000+</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            <span>Project Details</span>
+            <textarea name="message" rows="6" required placeholder="Tell K.Fisha what you're working on..."></textarea>
+          </label>
+
+          <button class="submit-button" type="submit">
+            <span>Submit Inquiry</span>
+            <i>↗</i>
+          </button>
+
+          <p class="form-note">
+            Submissions open an addressed email to <strong>kfishamusic@gmail.com</strong>.
+          </p>
+        </form>
+      </div>
+    </section>
+
+    <!-- SOCIAL / FOOTER -->
+    <section class="social-section">
+      <p class="eyebrow reveal">Stay Connected</p>
+      <div class="social-links">
+        <a class="reveal" href="https://www.youtube.com/@KFISHA1" target="_blank" rel="noopener noreferrer">
+          <span>YouTube</span><i>↗</i>
+        </a>
+        <a class="reveal" href="https://x.com/_kfisha" target="_blank" rel="noopener noreferrer">
+          <span>X</span><i>↗</i>
+        </a>
+        <a class="reveal" href="https://www.instagram.com/kfishasound" target="_blank" rel="noopener noreferrer">
+          <span>Instagram</span><i>↗</i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <img src="baitwell-logo.png" alt="Baitwell" />
+      <p>Creating records that last.</p>
+    </div>
+    <p>© <span id="year"></span> Baitwell</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
